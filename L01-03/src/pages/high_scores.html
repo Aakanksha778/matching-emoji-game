@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>High Scores</title>
+
+  <!-- Bulma (required) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/memory_match.css" />
+</head>
+<body>
+
+  <!--  Bulma Navbar (both pages) -->
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item has-text-weight-bold" href="./memory_match.html">
+        Memory Match
+      </a>
+
+      <a role="button"
+         class="navbar-burger"
+         aria-label="menu"
+         aria-expanded="false"
+         data-target="mainNavbar">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="mainNavbar" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="./memory_match.html">Play Game</a>
+        <a class="navbar-item" href="./high_scores.html">High Scores</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="section">
+    <div class="container">
+
+      <header class="mb-5">
+        <h1 class="title is-2">High Scores</h1>
+      </header>
+
+      <div class="panel-box">
+        <div class="table-container">
+          <!-- table structure/IDs -->
+          <table id="scores-table" class="table is-fullwidth">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Player</th>
+                <th>Moves</th>
+                <th>Time (s)</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody id="scores-body">
+              <!-- Lab 03: JS fills dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="../js/high_scores.js"></script>
+</body>
+</html>
