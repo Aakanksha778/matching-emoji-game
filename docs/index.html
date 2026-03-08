@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory Match</title>
+
+  <link rel="stylesheet" href="./css/memory_match.css">
+</head>
+<body>
+
+  <!--  Bulma Navbar (both pages) -->
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item has-text-weight-bold" href="./index.html">
+        Memory Match
+      </a>
+
+      <a role="button"
+         class="navbar-burger"
+         aria-label="menu"
+         aria-expanded="false"
+         data-target="mainNavbar">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="mainNavbar" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="./index.html">Play Game</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="section">
+    <div class="container">
+
+      <!--title  -->
+      <header class="mb-5">
+        <h1 class="title is-2 mb-2">Memory Match</h1>
+        <p class="subtitle is-5">
+          Flip two cards at a time. If they match, they stay revealed. Match all pairs to win.
+        </p>
+      </header>
+
+      <!-- layout -->
+      <div class="columns is-variable is-6">
+
+        <div class="column is-4">
+          <div class="panel-box">
+            <h2 class="panel-title">Game Status</h2>
+
+            <div id="status-panel">
+              <p><strong>Moves:</strong> <span id="moves">0</span></p>
+              <p><strong>Matches:</strong> <span id="matches">0</span> / <span id="total-pairs">8</span></p>
+              <p><strong>Time:</strong> <span id="time">0</span> s</p>
+            </div>
+
+            <hr class="divider">
+
+            <div class="buttons is-flex is-flex-direction-column">
+              <button id="btn-new-game" class="button is-primary is-fullwidth" type="button">New Game</button>
+              <button id="btn-reset" class="button is-light is-fullwidth" type="button">Reset (Same Board)</button>
+            </div>
+          </div>
+        </div>
+
+ 
+        <div class="column is-8">
+          <div class="panel-box">
+            <h2 class="panel-title">Board</h2>
+
+        
+            <div id="board" aria-label="Game board"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="message" class="message-area"></div>
+
+    </div>
+  </main>
+
+  <script src="./js/memory_match.js"></script>
+</body>
+</html>
